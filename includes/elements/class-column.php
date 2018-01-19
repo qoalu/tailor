@@ -82,6 +82,23 @@ if ( class_exists( 'Tailor_Element' ) && ! class_exists( 'Tailor_Column_Element'
 			    ),
 		    ) );
 
+
+		    // Additional custom Control for ordering
+		    $this->add_setting( 'order', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_number',
+		    ) );
+		    $this->add_control( 'order', array(
+			    'label'                 =>  __( 'Order', 'tailor' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  40,
+			    'input_attrs'           =>  array(
+				    'placeholder'           =>  '1',
+			    )
+		    ) );
+
+		    // END
+
 		    $general_control_types = array(
 			    'vertical_alignment',
 			    'vertical_alignment_tablet',

@@ -30,10 +30,12 @@ if ( ! function_exists( 'tailor_shortcode_column' ) ) {
 	     * @param array
 	     */
 	    $default_atts = apply_filters( 'tailor_shortcode_default_atts_' . $tag, array() );
+	    $default_atts = array_merge($default_atts, array('order' => 1));
+
 	    $atts = shortcode_atts( $default_atts, $atts, $tag );
 	    $html_atts = array(
 		    'id'            =>  empty( $atts['id'] ) ? null : $atts['id'],
-		    'class'         =>  explode( ' ', "tailor-column {$atts['class']}" ),
+		    'class'         =>  explode( ' ', "tailor-column {$atts['class']} order-{$atts['order']}" ),
 		    'data'          =>  array(),
 	    );
 
