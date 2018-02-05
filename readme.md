@@ -1,3 +1,6 @@
+# This is a fork of the page builder
+with more stuff and bugfixes.
+
 # [Tailor Page Builder for WordPress](http://www.gettailor.com/)
 
 This is the official GitHub repository for the Tailor page builder WordPress plugin.
